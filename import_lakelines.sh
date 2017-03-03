@@ -12,7 +12,7 @@ function import_geojson() {
     PGCLIENTENCODING=UTF8 ogr2ogr \
     -f Postgresql \
     -s_srs EPSG:4326 \
-    -t_srs EPSG:3857 \
+    -t_srs EPSG:4326 \
     PG:"$PGCONN" \
     "$geojson_file" \
     -nln "$table_name"
